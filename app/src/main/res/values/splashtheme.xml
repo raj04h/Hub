@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Splash Screen Theme without ActionBar -->
+    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">#009688</item>
+        <!-- You can also add a custom background here -->
+        <item name="android:statusBarColor">#009688</item>
+    </style>
+</resources>

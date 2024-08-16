@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/ic_intelli"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Hub"
+        tools:targetApi="31">
+
+        <activity android:name=".SplashActivity"
+            android:exported="true"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".LoginActivity"
+            android:exported="true">
+
+        </activity>
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name">
+        </activity>
+
+        <activity android:name=".ui.dashboard.Updates.NewsActivity"
+            android:exported="true"
+            android:label="News">
+        </activity>
+
+        <activity android:name=".ui.dashboard.Updates.TechActivity"
+            android:exported="true"
+            android:label="Tech">
+        </activity>
+        <activity android:name=".ui.dashboard.Updates.MarketActivity"
+            android:exported="true"
+            android:label="Market">
+        </activity>
+
+        <activity android:name=".ui.dashboard.Updates.SportActivity"
+            android:exported="true"
+            android:label="Sport">
+        </activity>
+        <activity android:name=".ui.dashboard.calculation.CalciActivity"
+            android:exported="true"
+            android:label="Calculator">
+        </activity>
+        <activity android:name=".ui.dashboard.calculation.BMIActivity"
+            android:exported="true"
+            android:label="BMI">
+        </activity>
+        <activity android:name=".ui.dashboard.calculation.CurrencyActivity"
+            android:exported="true"
+            android:label="Currency">
+        </activity>
+        <activity android:name=".ui.dashboard.calculation.TimecalActivity"
+            android:exported="true"
+            android:label="Timing cali">
+        </activity>
+        <activity android:name=".ui.dashboard.calculation.StockcalActivity"
+            android:exported="true"
+            android:label="Stock Calci">
+        </activity>
+        <activity android:name=".ui.dashboard.calculation.MorecalciActivity"
+            android:exported="true"
+            android:label="More">
+        </activity>
+        <activity android:name=".ui.dashboard.Professional.ScannerActivity"
+            android:exported="true"
+            android:label="Scanner">
+        </activity>
+        <activity android:name=".ui.dashboard.Professional.VoicerecorderActivity"
+            android:exported="true"
+            android:label="Voice Recorder">
+        </activity>
+        <activity android:name=".ui.dashboard.Professional.PdfreaderActivity"
+            android:exported="true"
+            android:label="PDF Reader">
+        </activity>
+        <activity android:name=".ui.dashboard.Professional.HealthActivity"
+            android:exported="true"
+            android:label="Health">
+        </activity>
+        <activity android:name=".ui.dashboard.Professional.MoreProfessional"
+            android:exported="true"
+            android:label="More">
+        </activity>
+        <activity android:name=".ui.dashboard.Navigation.WeatherActivity"
+            android:exported="true"
+            android:label="Weather">
+        </activity>
+        <activity android:name=".ui.dashboard.Navigation.MapViewActivity"
+            android:exported="true"
+            android:label="Map View">
+        </activity>
+        <activity android:name=".ui.dashboard.Navigation.JourneyActivity"
+            android:exported="true"
+            android:label="Journey">
+        </activity>
+        <activity android:name=".ui.dashboard.Navigation.MoreNavigation"
+            android:exported="true"
+            android:label="More">
+        </activity>
+        <activity android:name=".ui.dashboard.Productivity.ClockActivity"
+            android:exported="true"
+            android:label="Clock-Calender">
+        </activity>
+        <activity android:name=".ui.dashboard.Productivity.TOdoActivity"
+            android:exported="true"
+            android:label="To-Do">
+        </activity>
+        <activity android:name=".ui.dashboard.Productivity.NotesActivity"
+            android:exported="true"
+            android:label="Notes">
+        </activity>
+        <activity android:name=".ui.dashboard.Productivity.ReminderActivity"
+            android:exported="true"
+            android:label="Reminder">
+        </activity>
+
+        <activity android:name=".ui.dashboard.Updates.NewsFullview"
+            android:exported="true"
+            android:label="Brief News">
+
+        </activity>
+    </application>
+
+</manifest>
