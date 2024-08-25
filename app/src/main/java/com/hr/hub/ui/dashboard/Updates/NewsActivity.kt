@@ -35,6 +35,12 @@ class NewsActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_news)
 
+        getId()
+        btnclicklistener()
+        setUpRecyclerView()
+        getNews("GENERAL")
+    }
+    private fun getId(){
         recyclerView = findViewById(R.id.recycle_news)
         progressBar = findViewById(R.id.progbar_news)
 
@@ -45,7 +51,8 @@ class NewsActivity : AppCompatActivity(), View.OnClickListener {
         btnScience=findViewById(R.id.btn_science)
         btnSport=findViewById(R.id.btn_sport)
         btnTechnology=findViewById(R.id.btn_technology)
-
+    }
+    private fun btnclicklistener(){
         btnHeadline.setOnClickListener(this)
         btnBusiness.setOnClickListener(this)
         btnEntertainment.setOnClickListener(this)
@@ -53,9 +60,12 @@ class NewsActivity : AppCompatActivity(), View.OnClickListener {
         btnScience.setOnClickListener(this)
         btnSport.setOnClickListener(this)
         btnTechnology.setOnClickListener(this)
-
-        setUpRecyclerView()
-        getNews("GENERAL")
+    }
+    override fun onClick(v: View?) {
+        if(v is Button){
+            val Category=v.text.toString()
+            getNews(Category)
+        }
     }
 
     private fun setUpRecyclerView() {
@@ -65,7 +75,13 @@ class NewsActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun changeInProgress(isVisible: Boolean) {
-        progressBar.visibility = if (isVisible) View.VISIBLE else View.INVISIBLE
+        progressBar.visibility =
+            if (isVisible){
+                View.VISIBLE
+            }
+            else{
+            View.INVISIBLE
+            }
     }
 
     private fun getNews(category: String) {
@@ -77,12 +93,13 @@ class NewsActivity : AppCompatActivity(), View.OnClickListener {
                 .language("en")  // Hindi language code
                 .category(category)
                 .build(),
-            object : NewsApiClient.ArticlesResponseCallback {
+
+            object: NewsApiClient.ArticlesResponseCallback {
                 override fun onSuccess(response: ArticleResponse) {
                     runOnUiThread {
                         changeInProgress(false)
-                        response.articles?.let { articleList ->
-                            newsRecycleAdapter.updateData(articleList)
+                        response.articles?.let {
+                            articleList -> newsRecycleAdapter.updateData(articleList)
                         }
                     }
                 }
@@ -94,13 +111,8 @@ class NewsActivity : AppCompatActivity(), View.OnClickListener {
                     }
                 }
             }
-        )
-    }
 
-    override fun onClick(v: View?) {
-        if(v is Button){
-            val Category=v.text.toString()
-            getNews(Category)
-        }
+        )
+
     }
 }

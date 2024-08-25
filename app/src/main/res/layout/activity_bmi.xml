@@ -1,6 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.dashboard.calculation.BMIActivity"
+    android:background="#6898EDD3"
+    android:id="@+id/sl_bmi">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+    <TextView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="Put your Data here..."
+       android:layout_margin="20dp"
+       android:textSize="30dp"
+       android:textStyle="bold" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Male"
+            android:layout_margin="10dp"
+            android:id="@+id/rbtn_male"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="female"
+            android:layout_margin="10dp"
+            android:id="@+id/rbtn_female"/>
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/et_age"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:hint="Enter Your age"
+        android:inputType="number"/>
+
+    <EditText
+        android:id="@+id/et_height"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:minHeight="48dp"
+        android:hint="Height in Feet"
+        android:inputType="numberDecimal"/>
+
+    <EditText
+        android:id="@+id/et_weight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:minHeight="48dp"
+        android:hint="Weight in Kg"
+        android:inputType="numberDecimal"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate"
+        android:layout_gravity="center"
+        android:id="@+id/btn_calbmi"/>
+
+    <TextView
+        android:id="@+id/tvBMIResult"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_margin="30dp"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:textStyle="bold"
+        android:text="BMI ="
+        android:textColor="@color/black"
+        android:background="@drawable/round_background"/>
+
+
+
+
+</LinearLayout>
+</ScrollView>

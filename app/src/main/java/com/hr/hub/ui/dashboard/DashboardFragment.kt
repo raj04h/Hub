@@ -5,10 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
-import com.hr.hub.MainActivity
 import com.hr.hub.R
 import com.hr.hub.databinding.FragmentDashboardBinding
 import com.hr.hub.ui.dashboard.Navigation.JourneyActivity
@@ -38,9 +35,6 @@ import com.hr.hub.ui.dashboard.calculation.TimecalActivity
 class DashboardFragment : Fragment() {
 
     private var _binding: FragmentDashboardBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -78,7 +72,7 @@ class DashboardFragment : Fragment() {
         }
         val btncalci=binding.buttonCalculator
         btncalci.setOnClickListener {
-            val techEntry =Intent(requireContext(),CalciActivity::class.java)
+            val techEntry =Intent(requireContext(), CalciActivity::class.java)
             startActivity(techEntry)
         }
         val btnbmi=binding.buttonBmiCalculator
