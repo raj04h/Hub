@@ -21,21 +21,10 @@ import com.hr.hub.ui.dashboard.Professional.MoreProfessional
 import com.hr.hub.ui.dashboard.Professional.PdfreaderActivity
 import com.hr.hub.ui.dashboard.Professional.ScannerActivity
 import com.hr.hub.ui.dashboard.Professional.VoicerecorderActivity
-import com.hr.hub.ui.dashboard.Updates.MarketActivity
-import com.hr.hub.ui.dashboard.Updates.NewsActivity
-import com.hr.hub.ui.dashboard.Updates.SportActivity
-import com.hr.hub.ui.dashboard.Updates.TechActivity
-import com.hr.hub.ui.dashboard.calculation.BMIActivity
-import com.hr.hub.ui.dashboard.calculation.CalciActivity
-import com.hr.hub.ui.dashboard.calculation.CurrencyActivity
-import com.hr.hub.ui.dashboard.calculation.MorecalciActivity
-import com.hr.hub.ui.dashboard.calculation.StockcalActivity
-import com.hr.hub.ui.dashboard.calculation.TimecalActivity
 
 class DashboardFragment : Fragment() {
 
     private var _binding: FragmentDashboardBinding? = null
-    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -46,60 +35,7 @@ class DashboardFragment : Fragment() {
 
         val binding=FragmentDashboardBinding.bind(view)
 
-        val btnnews=binding.buttonNews
-        btnnews.setOnClickListener {
-            val newsEntry = Intent(requireContext(), NewsActivity::class.java)
-            startActivity(newsEntry)
-        }
 
-        val btnmarket=binding.buttonMarketIndex
-        btnmarket.setOnClickListener {
-            val marketEntry = Intent(requireContext(),MarketActivity::class.java)
-            startActivity(marketEntry)
-        }
-
-        val btnsport=binding.buttonSports
-
-        btnsport.setOnClickListener {
-            val sportEntry =Intent(requireContext(),SportActivity::class.java)
-            startActivity(sportEntry)
-        }
-
-        val btntech=binding.buttonTechnology
-        btntech.setOnClickListener {
-            val techEntry =Intent(requireContext(), TechActivity::class.java)
-            startActivity(techEntry)
-        }
-        val btncalci=binding.buttonCalculator
-        btncalci.setOnClickListener {
-            val techEntry =Intent(requireContext(), CalciActivity::class.java)
-            startActivity(techEntry)
-        }
-        val btnbmi=binding.buttonBmiCalculator
-        btnbmi.setOnClickListener {
-            val techEntry =Intent(requireContext(), BMIActivity::class.java)
-            startActivity(techEntry)
-        }
-        val btncurrency=binding.buttonCurrencyConverter
-        btncurrency.setOnClickListener {
-            val techEntry =Intent(requireContext(), CurrencyActivity::class.java)
-            startActivity(techEntry)
-        }
-        val btntimecal=binding.buttonTimeCalculator
-        btntimecal.setOnClickListener {
-            val techEntry =Intent(requireContext(), TimecalActivity::class.java)
-            startActivity(techEntry)
-        }
-        val btnstock=binding.buttonStockCalculator
-        btnstock.setOnClickListener {
-            val techEntry =Intent(requireContext(), StockcalActivity::class.java)
-            startActivity(techEntry)
-        }
-        val btncalculator=binding.buttonCalimore
-        btncalculator.setOnClickListener{
-            val techEntry=Intent(requireContext(),MorecalciActivity::class.java)
-            startActivity(techEntry)
-        }
         val btnscanner=binding.buttonDocScanner
         btnscanner.setOnClickListener {
             val techEntry =Intent(requireContext(), ScannerActivity::class.java)

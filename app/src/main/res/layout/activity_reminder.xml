@@ -1,6 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@android:color/white">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <EditText
+        android:id="@+id/et_alarmlebel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="#A0CFD5"
+        android:hint="Alarm Label"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:textColorHint="#546E7A"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        tools:ignore="VisualLintTextFieldSize,TextSizeCheck" />
+
+    <TimePicker
+        android:id="@+id/TP_intime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:headerBackground="@android:drawable/button_onoff_indicator_on"
+        android:numbersBackgroundColor="#06133A"
+        android:numbersSelectorColor="#00BCD4"
+        android:numbersTextColor="#F64949"
+        android:textAlignment="center"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:text="Sound"
+            android:id="@+id/btn_soundChoose"/>
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+
+        <CheckBox
+            android:id="@+id/cb_Mon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:text="Mon"
+            android:textColor="@color/black"/>
+
+        <CheckBox
+            android:id="@+id/cb_Tue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:text="Tue"
+            android:textColor="@color/black"/>
+
+        <CheckBox
+            android:id="@+id/cb_Wed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:text="Wed"
+            android:textColor="@color/black"/>
+
+        <CheckBox
+            android:id="@+id/cb_Thu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:text="Thu"
+            android:textColor="@color/black" />
+
+        <CheckBox
+            android:id="@+id/cb_Fri"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_row="1"
+            android:layout_column="1"
+            android:text="Fri"
+            android:textColor="@color/black" />
+
+        <CheckBox
+            android:id="@+id/cb_Sat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:text="Sat"
+            android:textColor="@color/black" />
+
+        <CheckBox
+            android:id="@+id/cb_sun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="3"
+            android:text="Sun"
+            android:textColor="@color/black"/>
+
+    </GridLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_alarmset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_green_light"
+        android:text="Save Alarm"
+        android:textColor="#0D47A1"
+        tools:ignore="VisualLintButtonSize" />
+
+
+
+
+
+
+</LinearLayout>

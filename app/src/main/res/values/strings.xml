@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Hub</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
+    <string name="title_home">Updates</string>
+    <string name="title_dashboard">utility</string>
     <string name="title_intelligence">Intelligence</string>
+    <string name="default_web_client_id">622256950317-ddcat9lgbulu9rr0uffhp0rhp7lbspll.apps.googleusercontent.com</string>
 </resources>

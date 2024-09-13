@@ -8,7 +8,7 @@ plugins {
 
 android {
     namespace = "com.hr.hub"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.hr.hub"
@@ -64,17 +64,55 @@ dependencies {
     implementation ("com.github.bumptech.glide:glide:4.15.1")
     annotationProcessor ("com.github.bumptech.glide:compiler:4.15.1")
 
-    val room_version = "2.6.1"
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
+    implementation ("org.json:json:20210307")
 
+
+    val room_version = "2.6.1"
     implementation("androidx.room:room-runtime:$room_version")
     annotationProcessor("androidx.room:room-compiler:$room_version")
-
     // To use Kotlin annotation processing tool (kapt)
     kapt("androidx.room:room-compiler:$room_version")
-
     // optional - Kotlin Extensions and Coroutines support for Room
     implementation("androidx.room:room-ktx:$room_version")
 
+    implementation ("com.github.msayan:tutorial-view:v1.0.10")
 
+    // To recognize Latin script
+    implementation ("com.google.android.gms:play-services-mlkit-text-recognition:19.0.1")
+
+    // To recognize Chinese script
+    implementation ("com.google.android.gms:play-services-mlkit-text-recognition-chinese:16.0.1")
+
+    // To recognize Devanagari script
+    implementation ("com.google.android.gms:play-services-mlkit-text-recognition-devanagari:16.0.1")
+
+    // To recognize Japanese script
+    implementation ("com.google.android.gms:play-services-mlkit-text-recognition-japanese:16.0.1")
+
+    // To recognize Korean script
+    implementation ("com.google.android.gms:play-services-mlkit-text-recognition-korean:16.0.1")
+
+    // CameraX dependencies
+
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
+
+    val camerax_version = "1.2.2" // Check for the latest version
+    implementation ("androidx.camera:camera-core:${camerax_version}")
+    implementation ("androidx.camera:camera-camera2:${camerax_version}")
+    implementation ("androidx.camera:camera-lifecycle:${camerax_version}")
+    implementation ("androidx.camera:camera-view:${camerax_version}")
+    implementation("androidx.camera:camera-extensions:${camerax_version}")
+
+    implementation("androidx.security:security-crypto:1.1.0-alpha06")
+    implementation ("com.github.yalantis:ucrop:2.2.6")
+
+
+    implementation("androidx.credentials:credentials:1.5.0-alpha05")
+
+    // Android 13 and below.
+    implementation("androidx.credentials:credentials-play-services-auth:1.5.0-a1lpha05")
+    implementation("com.google.android.gms:play-services-auth:20.4.1")
 
 }

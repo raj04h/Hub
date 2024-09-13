@@ -15,7 +15,9 @@ import com.squareup.picasso.Picasso
 
 class NewsRecycleAdapter(
     private val context: Context,
-    private val arrnews: ArrayList<NewsModel>
+    private val arrnews: ArrayList<NewsModel>,
+
+    private var lastnewsposition: Int = -1
 ) : RecyclerView.Adapter<NewsRecycleAdapter.ViewHolder>() {
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -43,9 +45,11 @@ class NewsRecycleAdapter(
 
             intent.putExtra("url",newsItem.urlnews)
             v.context.startActivity(intent)
+
+            setSlideAnimation(holder.itemView,position)
         }
 
-        if(newsItem.urlToImage.isNotEmpty()){
+        if (newsItem.urlToImage.isNotEmpty()) {
             Picasso.get()
                 .load(newsItem.urlToImage)
                 .placeholder(R.drawable.placeholder)
@@ -64,6 +68,18 @@ class NewsRecycleAdapter(
         }
     }
 
+    private fun setSlideAnimation(view: View,position: Int) {
+        view.clearAnimation()
+        if (position > lastnewsposition) {
+            val animation = android.view.animation.AnimationUtils.loadAnimation(
+                context,
+                android.R.anim.fade_in
+            )
+            view.startAnimation(animation)
+            lastnewsposition=position
+        }
+    }
+
     fun updateData(newArticles: List<Article>) {
         arrnews.clear()
         newArticles.forEach { article ->
@@ -78,5 +94,4 @@ class NewsRecycleAdapter(
         }
         notifyDataSetChanged()
     }
-
 }

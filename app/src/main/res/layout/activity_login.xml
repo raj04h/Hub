@@ -7,76 +7,25 @@
     android:background="@drawable/earth">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="338dp"
-        android:layout_height="209dp"
+        android:layout_width="140dp"
+        android:layout_height="100dp"
         app:cardBackgroundColor="#871A4A81"
         app:cardCornerRadius="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_register"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.865">
-
-        <EditText
-            android:id="@+id/text_username"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_gravity="top|center"
-            android:layout_margin="15dp"
-            android:autofillHints=""
-            android:background="@color/white"
-            android:hint="UserName:-"
-            android:inputType="textPersonName"
-            android:padding="10dp"
-            android:textColor="@color/black"
-            android:textColorHint="@color/black">
-
-        </EditText>
-
-        <EditText
-            android:id="@+id/text_userpassword"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_gravity="center"
-            android:layout_margin="15dp"
-            android:autofillHints="password"
-            android:background="@color/white"
-            android:hint="Key:-"
-            android:inputType="textPassword"
-            android:padding="10dp"
-            android:password="true"
-            android:textColor="@color/black"
-            android:textColorHint="@color/black">
-
-        </EditText>
-
-        <Button
-            android:id="@+id/btn_login"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_gravity="bottom|center"
-            android:layout_marginBottom="10dp"
-            app:cornerRadius="60dp"
-            app:icon="@drawable/baseline_login_24"
-            tools:ignore="SpeakableTextPresentCheck" />
-
-
-    </androidx.cardview.widget.CardView>
-
-    <Button
-        android:id="@+id/btn_register"
-        android:layout_width="120dp"
-        android:layout_height="48dp"
-        android:backgroundTint="@color/white"
-        android:text="Register"
-        android:textColor="@color/black"
-        app:cornerRadius="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.856" />
+        app:layout_constraintVertical_bias="0.445">
 
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/btn_google_sign_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:layout_constraintBottom_toTopOf="@+id/btn_register"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+    </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
