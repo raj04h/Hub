@@ -8,8 +8,8 @@ import android.widget.ProgressBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.hr.hub.BuildConfig
 import com.hr.hub.R
-import com.hr.hub.ui.APIFile
 import com.hr.hub.ui.dashboard.Updates.Adapters.NewsRecycleAdapter
 import com.kwabenaberko.newsapilib.NewsApiClient
 import com.kwabenaberko.newsapilib.models.request.TopHeadlinesRequest
@@ -17,6 +17,8 @@ import com.kwabenaberko.newsapilib.models.response.ArticleResponse
 import java.util.Locale.Category
 
 class NewsActivity : AppCompatActivity(), View.OnClickListener {
+
+    private val newsAPI=BuildConfig.NEWS_API
 
     private lateinit var newsRecycleAdapter: NewsRecycleAdapter
     private lateinit var recyclerView: RecyclerView
@@ -87,7 +89,7 @@ class NewsActivity : AppCompatActivity(), View.OnClickListener {
     private fun getNews(category: String) {
         changeInProgress(true)
 
-        val newsApiClient = NewsApiClient(APIFile.newsAPI)
+        val newsApiClient = NewsApiClient(newsAPI)
         newsApiClient.getTopHeadlines(
             TopHeadlinesRequest.Builder()
                 .language("en")  // Hindi language code

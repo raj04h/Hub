@@ -6,17 +6,21 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+
 import com.google.ai.client.generativeai.GenerativeModel
 import com.google.ai.client.generativeai.type.ResponseStoppedException
+import com.hr.hub.BuildConfig
 
 import com.hr.hub.databinding.FragmentIntelligenceBinding
-import com.hr.hub.ui.APIFile
+
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 class IntelligenceFragment : Fragment() {
+
+    private val geminai= BuildConfig.GEMINI_API
 
     private var _binding: FragmentIntelligenceBinding? = null
 
@@ -46,7 +50,7 @@ class IntelligenceFragment : Fragment() {
             val generativeModel = GenerativeModel(
                 modelName = "gemini-1.5-flash",
                 // Access your API key as a Build Configuration variable (see "Set up your API key" above)
-                apiKey =APIFile.geminiAPI
+                apiKey =geminai
             )
 
             fun generatetext(prompt: String) {

@@ -5,8 +5,8 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.hr.hub.BuildConfig
 import com.hr.hub.R
-import com.hr.hub.ui.APIFile
 import okhttp3.Call
 import okhttp3.Callback
 import okhttp3.OkHttpClient
@@ -22,6 +22,8 @@ class WeatherActivity: AppCompatActivity() {
     private lateinit var btnenter:Button
     private lateinit var tvweather:TextView
     private val client=OkHttpClient()
+
+    private val weatherAPI=BuildConfig.WEATHER_API
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,7 +47,7 @@ class WeatherActivity: AppCompatActivity() {
     }
 
     private fun fetchWeather(city:String){
-        val apikey=APIFile.weatherAPI
+        val apikey=weatherAPI
         val URL="https://api.openweathermap.org/data/2.5/weather?q=$city &appid=$apikey&units=metric"
 
         val request=Request.Builder()

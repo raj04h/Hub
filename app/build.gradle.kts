@@ -14,10 +14,17 @@ android {
         applicationId = "com.hr.hub"
         minSdk = 26
         targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 2
+        versionName = "1.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        buildFeatures {
+            buildConfig = true
+        }
+        buildConfigField ("String", "GEMINI_API", "\"AIzaSyDwfhNfKUzIpyuaCyKjuGBEbauBwPt4ngU\"")
+        buildConfigField("String","NEWS_API","\"69d4de55a8ad42e3a255b7fc0bd703e5\"")
+        buildConfigField("String","WEATHER_API","\"9aa631cd336966e3725f57fce28f9bcf\"")
+
     }
 
     buildTypes {
@@ -39,6 +46,12 @@ android {
     buildFeatures {
         viewBinding = true
     }
+    dependenciesInfo {
+        includeInApk = true
+        includeInBundle = true
+    }
+    ndkVersion = "26.1.10909125"
+    buildToolsVersion = "34.0.0"
 }
 
 dependencies {
