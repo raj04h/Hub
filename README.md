@@ -4,11 +4,13 @@ Hub is a production-grade Android application designed to centralize essential u
 Rather than building a single-purpose app, Hub was engineered as a scalable utility platform — where multiple functional modules can coexist under one clean architecture without compromising performance, maintainability, or user experience.
 
 ---
-# App Preview
-<img width="702" height="1600" alt="image" src="https://github.com/user-attachments/assets/db2d9fa5-bebe-4373-b31e-1c18f358762e" /> <img width="702" height="1600" alt="image" src="https://github.com/user-attachments/assets/28826a8f-ab5f-467f-b638-48704c622d5d" />
+## 📱 App Preview
 
-<img width="702" height="1600" alt="image" src="https://github.com/user-attachments/assets/3f00eaa7-190c-4660-b389-e1b16cced14b" />
-
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/db2d9fa5-bebe-4373-b31e-1c18f358762e" width="250"/>
+  <img src="https://github.com/user-attachments/assets/28826a8f-ab5f-467f-b638-48704c622d5d" width="250"/>
+  <img src="https://github.com/user-attachments/assets/3f00eaa7-190c-4660-b389-e1b16cced14b" width="250"/>
+</p>
 
 ## 📌 Overview
 
@@ -73,4 +75,6 @@ This repo contains code of Hub app.
 * Improved offline-first architecture
 
 * CI/CD integration
+
+Copyright © 2024. Built with ❤️ by [Himanshu Raj].
 
